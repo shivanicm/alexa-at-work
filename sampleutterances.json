@@ -1,0 +1,10 @@
+MyMessageIntent send {lickytongue|Message}
+MyMessageIntent send {my name is chuck|Message}
+MyMessageIntent send {Can I get a banana|Message}
+MyMessageIntent my message is {I need more Food|Message}
+MyMessageIntent my message is {cookie|Message}
+MyMessageIntent my message is {juicyfruit gum|Message}
+WhatsMyMessageIntent what's my message
+WhatsMyMessageIntent what is my message
+WhatsMyMessageIntent what was my message
+WhatsMyMessageIntent what is my slack message

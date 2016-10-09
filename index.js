@@ -138,11 +138,11 @@ function getWelcomeResponse(callback) {
     var cardTitle = "Welcome";
     var speechOutput = "Welcome to Alexa in the workplace, "
                 + "You can send a message to the Slack channel by saying, "
-                + "my message is...";
+                + "send message...";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     var repromptText = "You can give me your message by saying, "
-                + "my message is...";
+                + "send message...";
     var shouldEndSession = false;
 
     callback(sessionAttributes,
@@ -177,12 +177,12 @@ function setMessageInSession(intent, session, callback) {
             console.log('problem with request: ' + e.message);
             context.fail(e);
         });
-        req.write('{"channel": "#general", "username": "alexa@work", "text": "[via Alexa]: ' + message + '", "icon_emoji": ":ghost:"}');
+        req.write('{"channel": "#general", "username": "alexa@work", "text": "' + message + '", "icon_emoji": ":no_mouth:"}');
         req.end();
     } else {
         speechOutput = "I didn't hear your message clearly, please try again";
         repromptText = "I didn't hear your message clearly, you can give me your "
-                + "message by saying, my message is...";
+                + "message by saying, send message...";
     callback(sessionAttributes, 
              buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
     }
@@ -211,7 +211,7 @@ function getMessageFromSession(intent, session, callback) {
         shouldEndSession = true;
     }
     else {
-        speechOutput = "I didn't hear your message clearly. As an example, you can say, My message is 'hello, team!'";
+        speechOutput = "I didn't hear your message clearly. As an example, you can say, Send message 'hello, team!'";
     }
 
     // Setting repromptText to null signifies that we do not want to reprompt the user. 

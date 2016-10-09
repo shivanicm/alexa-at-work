@@ -1,5 +1,5 @@
-## Alexa at Work
-# Alexa...in the workplace
+# Alexa at Work
+## Alexa...in the workplace
 
 [Alexa](https://developer.amazon.com/alexa) skill that enables [Slack](https://slack.com)
 
